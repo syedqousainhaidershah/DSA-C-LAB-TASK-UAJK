@@ -2,21 +2,9 @@
 #include <vector>
 using namespace std;
 
-/*
- * Function: addSalary
- * Purpose : Adds a new salary to the list of salaries
- * Input : vector<int>& salaries - reference to salary list
- * int salary - salary value to add
- */
 void addSalary(vector<int>& salaries, int salary) {
     salaries.push_back(salary);
 }
-
-/*
- * Function: displaySalaries
- * Purpose : Displays all salaries in the current list
- * Input : vector<int>& salaries - reference to salary list
- */
 void displaySalaries(const vector<int>& salaries) {
     if(salaries.empty()) {
         cout << "No salaries available." << endl;
@@ -28,16 +16,10 @@ void displaySalaries(const vector<int>& salaries) {
     }
     cout << endl;
 }
-
-/*
- * Function: bubbleSort
- * Purpose : Sorts the salary list in ascending order using Bubble Sort
- * Input : vector<int>& salaries - reference to salary list
- */
 void bubbleSort(vector<int>& salaries) {
     int n = salaries.size();
     for (int i = 0; i < n - 1; i++) {
-        bool swapped = false; // Optimization: check if swap happened
+        bool swapped = false; 
         for (int j = 0; j < n - i - 1; j++) {
             if (salaries[j] > salaries[j + 1]) {
                 int temp = salaries[j];
@@ -46,7 +28,7 @@ void bubbleSort(vector<int>& salaries) {
                 swapped = true;
             }
         }
-        if (!swapped) break; // Already sorted
+        if (!swapped) break; 
     }
 }
 
@@ -93,3 +75,4 @@ int main() {
 
     return 0;
 }
+
