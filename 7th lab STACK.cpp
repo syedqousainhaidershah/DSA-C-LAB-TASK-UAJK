@@ -2,32 +2,28 @@
 #include <string>
 using namespace std;
 
-// Maximum size of stack
 #define MAX 100
-
-// Stack class using Array
 class BookStack {
 private:
-    string books[MAX]; // Array to store book names
-    int top; // Index of the top element
-
+    string books[MAX]; 
+    int top; 
 public:
-    // Constructor to initialize stack
+   
     BookStack() {
-        top = -1; // Stack is empty initially
+        top = -1; 
     }
 
-    // Function to check if stack is empty
+
     bool isEmpty() {
         return (top == -1);
     }
 
-    // Function to check if stack is full
+    
     bool isFull() {
         return (top == MAX - 1);
     }
 
-    // Push operation: Add a new book
+    
     void push(string bookName) {
         if (isFull()) {
             cout << "? Stack Overflow! Cannot add more books.\n";
@@ -38,7 +34,7 @@ public:
         cout << "? Book added: " << bookName << endl;
     }
 
-    // Pop operation: Remove the top book
+    
     void pop() {
         if (isEmpty()) {
             cout << "? Stack Underflow! No books to remove.\n";
@@ -48,7 +44,7 @@ public:
         top--;
     }
 
-    // Peek operation: View the top book
+  
     void peek() {
         if (isEmpty()) {
             cout << "?? Stack is empty. No top book.\n";
@@ -57,7 +53,7 @@ public:
         cout << "?? Top Book: " << books[top] << endl;
     }
 
-    // Display all books from top to bottom
+  
     void display() {
         if (isEmpty()) {
             cout << "?? No books in stack.\n";
@@ -71,7 +67,7 @@ public:
     }
 };
 
-// Main function (Test cases + Menu)
+
 int main() {
     BookStack stack;
     int choice;
@@ -127,3 +123,4 @@ int main() {
 
     return 0;
 }
+
