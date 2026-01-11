@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-#define MAX 5 // Maximum size of queue
+#define MAX 5 
 
 class TicketQueue {
 private:
@@ -10,23 +10,23 @@ private:
     int front, rear;
 
 public:
-    // Constructor
+    
     TicketQueue() {
         front = -1;
         rear = -1;
     }
 
-    // Check if queue is empty
+    
     bool isEmpty() {
         return (front == -1);
     }
 
-    // Check if queue is full
+    
     bool isFull() {
         return (rear == MAX - 1);
     }
 
-    // Add a customer ticket (Enqueue)
+    
     void enqueue(string ticket) {
         if (isFull()) {
             cout << "Queue is full. Cannot add ticket.\n";
@@ -40,7 +40,7 @@ public:
         cout << "Ticket added successfully.\n";
     }
 
-    // Process next ticket (Dequeue)
+    
     void dequeue() {
         if (isEmpty()) {
             cout << "Queue is empty. No ticket to process.\n";
@@ -55,7 +55,7 @@ public:
         }
     }
 
-    // Display all pending tickets
+    
     void display() {
         if (isEmpty()) {
             cout << "No pending tickets.\n";
@@ -67,7 +67,7 @@ public:
         }
     }
 
-    // Cancel a specific ticket
+   
     void cancelTicket(string ticket) {
         if (isEmpty()) {
             cout << "Queue is empty. No ticket to cancel.\n";
@@ -158,3 +158,4 @@ int main() {
 
     return 0;
 }
+
