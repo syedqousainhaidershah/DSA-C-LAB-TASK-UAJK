@@ -1,0 +1,1 @@
+These task are made by SYED QOUSAIN HAIDER NAQVI, STUDENT OF CET [SOFTWARE ENGERNING]. These are all of dsa task which i performed myself and submitted all of them to my course instructor sir zeeshan sahb. I performed multiple task like linear binary search linked list and many more . thank you 
